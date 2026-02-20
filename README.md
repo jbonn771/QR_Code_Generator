@@ -1,38 +1,39 @@
 QR Code Location Generator
-Print-Ready SVG QR Codes for /go/:location Redirects
+
+Print-ready SVG QR codes for /go/:location redirect systems
 
 
 
 
 
 
-Generate print-ready SVG QR codes from a CSV file of /go/:location_slug URLs.
+Generate high-resolution, print-safe SVG QR codes from a CSV file of /go/:location_slug URLs.
 
-Each QR code:
+Each QR:
 
 Encodes a full redirect URL
 
-Automatically extracts the location_slug
+Extracts the location_slug automatically
 
-Prints the slug centered underneath the QR
+Prints the slug centered underneath
 
-Outputs high-resolution vector SVG files (ideal for commercial print vendors)
+Exports scalable vector SVG files (ideal for professional printing)
 
-✨ Features
+Features
 
-🔁 Works with existing /go/:location redirect systems
+Works with existing /go/:location redirect routes
 
-🖨 Exports scalable vector SVG (no pixelation)
+Bulk QR generation from CSV
 
-🏷 Automatically labels each QR with its slug
+Vector SVG output (no pixelation)
 
-📦 Bulk generation from CSV
+Automatic slug labeling
 
-🎯 Designed for offline attribution tracking
+Designed for offline marketing attribution
 
-📥 Input Format
+Input Format
 
-Create a CSV file (e.g. qr_urls.csv) with at least one column named:
+Create a CSV file (example: qr_urls.csv) with a column named:
 
 url
 
@@ -50,33 +51,35 @@ Everything after /go/: becomes:
 
 The output filename
 
-The label printed beneath the QR
+The printed label under the QR
 
 URLs must include https://
 
-📦 Installation
+Installation
 pip install "qrcode[pil]" pandas svgwrite
 
 If using zsh, keep the quotes around "qrcode[pil]".
 
-▶️ Usage
+Usage
 
 Place qr_urls.csv in the same directory as the script.
 
 Run:
 
 python3 qrcodegeneratorloc.py
-📁 Output Structure
+Output
 
-After running, the script generates:
+After running, a folder is created:
 
 qr_codes_svg/
-  sofi__coffee_shop.svg
-  west_avenue_corridor__gym_commercial.svg
-  wynwood__apartment_complex_lobby.svg
-  ...
 
-Each SVG file includes:
+Inside you will find files like:
+
+sofi__coffee_shop.svg
+west_avenue_corridor__gym_commercial.svg
+wynwood__apartment_complex_lobby.svg
+
+Each SVG file contains:
 
 Vector QR code
 
@@ -86,9 +89,9 @@ Centered slug label
 
 Print-safe formatting
 
-🖨 Print Recommendations
+Recommended Print Specifications
 
-For professional printing:
+When sending files to a vendor:
 
 Final QR size: 1.5–2.0 inches square
 
@@ -100,7 +103,7 @@ Print black on white only
 
 Keep at least 0.25 inches from trim edge
 
-🧠 Location Slug Convention
+Slug Convention
 
 Format:
 
@@ -112,7 +115,7 @@ sofi__coffee_shop
 ocean_drive__gym_studio
 wynwood__supplement_store
 
-This structure enables:
+This ensures:
 
 Clean tracking
 
@@ -120,9 +123,9 @@ Easy file naming
 
 Reliable redirect mapping
 
-Manual fallback typing if needed
+Manual fallback typing if QR fails
 
-📊 Example Workflow
+Typical Workflow
 
 Generate /go/:location_slug URLs
 
@@ -130,24 +133,10 @@ Add them to qr_urls.csv
 
 Run the script
 
-Zip the qr_codes_svg/ directory
+Zip qr_codes_svg/
 
-Send to your print vendor
+Send to your printer
 
-🛠 Customization
+License
 
-You can modify:
-
-QR size
-
-Font size
-
-Label formatting
-
-Add a logo to the center
-
-Export to multi-page PDF instead of individual SVGs
-
-📜 License
-
-MIT — use freely for commercial or personal projects.
+MIT — free for commercial and personal use.
